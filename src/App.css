@@ -62,11 +62,15 @@
   display: flex;
   justify-content: space-between;
 }
+
 .error-message {
+  text-align: left;
   color: #d71313;
   font-size: 12px;
-  margin-left: 12px;
   font-weight: 500;
+  width: 100%;
+  width: 100%;
+  display: block;
 }
 .dropdown-div {
   display: flex;

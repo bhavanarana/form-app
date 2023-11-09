@@ -23,8 +23,6 @@ export const OBJECT_ELEMENT = {
   gender: "",
   email: "",
   password: "",
-  ques: "",
-  ans: "",
   address: "",
   city: "",
   state: "",

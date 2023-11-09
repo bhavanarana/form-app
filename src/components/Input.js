@@ -23,36 +23,46 @@ const Input = ({
   };
 
   return (
-    <div className={clabelInput}>
-      <label className={clabel}>{nameLabel}</label>
-      <div className="input-container">
-        <input
-          className={cinput}
-          type={showPassword ? "text" : type}
-          minLength={minLength}
-          maxLength={maxLength}
-          onChange={(e) => {
-            if (!validationFunc) {
-              setValue(e, value);
-            } else if (isMatch) {
-              validationFunc(e, errorMessage, setError, value);
-            } else {
-              validationFunc(e, errorMessage, setValue, setError, value, regx);
-            }
-          }}
-        />
-        {type === "password" && (
-          <span className="eye-icon" onClick={togglePasswordVisibility}>
-            {showPassword ? (
-              <ion-icon name="eye-outline"></ion-icon>
-            ) : (
-              <ion-icon name="eye-off-outline"></ion-icon>
-            )}
-          </span>
-        )}
+    <>
+      <div className={clabelInput}>
+        <label className={clabel}>{nameLabel}</label>
+        <div className="input-container">
+          <input
+            className={cinput}
+            type={showPassword ? "text" : type}
+            minLength={minLength}
+            maxLength={maxLength}
+            onChange={(e) => {
+              if (!validationFunc) {
+                setValue(e, value);
+              } else if (isMatch) {
+                validationFunc(e, errorMessage, setError, value);
+              } else {
+                validationFunc(
+                  e,
+                  errorMessage,
+                  setValue,
+                  setError,
+                  value,
+                  regx
+                );
+              }
+            }}
+          />
+          {type === "password" && (
+            <span className="eye-icon" onClick={togglePasswordVisibility}>
+              {showPassword ? (
+                <ion-icon name="eye-outline"></ion-icon>
+              ) : (
+                <ion-icon name="eye-off-outline"></ion-icon>
+              )}
+            </span>
+          )}
+        </div>
       </div>
+
       {error && <p className={cerror}>{error}</p>}
-    </div>
+    </>
   );
 };
 export default Input;
