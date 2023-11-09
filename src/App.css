@@ -1,10 +1,93 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  background-color: #2b3467;
+  height: 150vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  float: right;
+  padding: 6px;
+  font-weight: 600;
+  background-color: #2b3467;
+  color: #fcffe7;
+  border-radius: 6px;
+  margin-top: 14px;
+  margin-right: 8px;
+  width: 80px;
+  cursor: pointer;
+}
+.container {
+  width: 30%;
+  background-color: #bad7e9;
+  padding: 10px;
+  height: 100vh;
+  border-radius: 10px;
+}
+.eye-icon {
+  cursor: pointer;
+  margin-left: -16px;
+  font-size: 14px;
+}
+.label-input {
+  display: flex;
+  align-items: center;
+}
+.label {
+  flex: 1;
+  display: inline;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+}
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 6px;
+}
+.input {
+  border-radius: 4px;
+  margin: 6px;
+  border: 1px solid #2b3467;
+  background-color: #fcffe7;
+}
+.phone {
+  display: flex;
+  justify-content: space-between;
+}
+.error-message {
+  color: #d71313;
+  font-size: 12px;
+  margin-left: 12px;
+  font-weight: 500;
+}
+.dropdown-div {
+  display: flex;
+  align-items: center;
+}
+.dropdown-input {
+  width: 166px;
+  display: flex;
+  margin: 6px 6px;
+  border-radius: 4px;
+  border: 1px solid #2b3467;
+  background-color: #fcffe7;
+}
+.dropdown-label {
+  flex: 1;
+}
+.heading {
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  margin: 12px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
